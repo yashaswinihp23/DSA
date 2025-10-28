@@ -48,3 +48,58 @@ class SolutionThree {
 }
 
 // -------------------------------------------------------------------------------------
+
+// Palindrome Number
+
+class SolutionFour {
+    public boolean isPalindromeNum(int num4) {
+        if (num4 < 0) return false;
+        int original = num4, reversed = 0;
+        while (num4 != 0) {
+            int digit = num4 % 10;
+            reversed = reversed * 10 + digit;
+            num4 /= 10;
+        }
+        return original == reversed;
+    }
+}
+
+// -------------------------------------------------------------------------------------
+
+// Valid Palindrome
+
+class SolutionFive {
+    public boolean isPalindromeStr(String text5) {
+        StringBuilder clean = new StringBuilder();
+        for (char c : text5.toCharArray()) {
+            if (Character.isLetterOrDigit(c)) clean.append(Character.toLowerCase(c));
+        }
+        String s = clean.toString();
+        int left = 0, right = s.length() - 1;
+        while (left < right) {
+            if (s.charAt(left++) != s.charAt(right--)) return false;
+        }
+        return true;
+    }
+}
+
+// -------------------------------------------------------------------------------------
+
+// Fizz Buzz
+
+import java.util.*;
+
+class SolutionSix {
+    public List<String> fizzBuzzSeq(int n6) {
+        List<String> res6 = new ArrayList<>();
+        for (int i = 1; i <= n6; i++) {
+            if (i % 3 == 0 && i % 5 == 0) res6.add("FizzBuzz");
+            else if (i % 3 == 0) res6.add("Fizz");
+            else if (i % 5 == 0) res6.add("Buzz");
+            else res6.add(String.valueOf(i));
+        }
+        return res6;
+    }
+}
+
+// -------------------------------------------------------------------------------------
