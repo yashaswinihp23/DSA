@@ -103,3 +103,38 @@ class SolutionSix {
 }
 
 // -------------------------------------------------------------------------------------
+
+// Contains Duplicate
+
+import java.util.*;
+
+class SolutionSeven {
+    public boolean hasDuplicate(int[] nums7) {
+        Set<Integer> seen7 = new HashSet<>();
+        for (int val : nums7) {
+            if (!seen7.add(val)) return true;
+        }
+        return false;
+    }
+}
+
+// -------------------------------------------------------------------------------------
+
+// Plus One
+
+class SolutionEight {
+    public int[] addOne(int[] digits8) {
+        for (int i = digits8.length - 1; i >= 0; i--) {
+            if (digits8[i] < 9) {
+                digits8[i]++;
+                return digits8;
+            }
+            digits8[i] = 0;
+        }
+        int[] result8 = new int[digits8.length + 1];
+        result8[0] = 1;
+        return result8;
+    }
+}
+
+// -------------------------------------------------------------------------------------
