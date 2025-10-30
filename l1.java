@@ -138,3 +138,18 @@ class SolutionEight {
 }
 
 // -------------------------------------------------------------------------------------
+
+// Reverse String
+
+class SolutionTen {
+    public void reverseText(char[] letters10) {
+        int left10 = 0, right10 = letters10.length - 1;
+        while (left10 < right10) {
+            char temp10 = letters10[left10];
+            letters10[left10++] = letters10[right10];
+            letters10[right10--] = temp10;
+        }
+    }
+}
+
+// -------------------------------------------------------------------------------------
