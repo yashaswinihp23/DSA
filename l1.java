@@ -153,3 +153,20 @@ class SolutionTen {
 }
 
 // -------------------------------------------------------------------------------------
+
+// Transpose Matrix
+
+class SolutionThirteen {
+    public int[][] transposeMatrix(int[][] mat13) {
+        int rows13 = mat13.length, cols13 = mat13[0].length;
+        int[][] result13 = new int[cols13][rows13];
+        for (int i = 0; i < rows13; i++) {
+            for (int j = 0; j < cols13; j++) {
+                result13[j][i] = mat13[i][j];
+            }
+        }
+        return result13;
+    }
+}
+
+-------------------------------------------------------------------------------------
