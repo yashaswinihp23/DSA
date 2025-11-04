@@ -169,4 +169,42 @@ class SolutionThirteen {
     }
 }
 
--------------------------------------------------------------------------------------
+// -------------------------------------------------------------------------------------
+
+// Reverse Integer
+
+class SolutionSeventeen {
+    public int reverseInt(int x17) {
+        long rev17 = 0;
+        while (x17 != 0) {
+            rev17 = rev17 * 10 + x17 % 10;
+            x17 /= 10;
+        }
+        return (rev17 < Integer.MIN_VALUE || rev17 > Integer.MAX_VALUE) ? 0 : (int) rev17;
+    }
+}
+
+// -------------------------------------------------------------------------------------
+
+// Count Frequency of Each Character in a String (Using Collections)
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class CharCountExample {
+    public static void main(String[] args) {
+        String input = "banana";
+        Map<Character, Integer> charCountMap = new HashMap<>();
+
+        for (char ch : input.toCharArray()) {
+            charCountMap.put(ch, charCountMap.getOrDefault(ch, 0) + 1);
+        }
+
+        // Print character counts
+        for (Map.Entry<Character, Integer> entry : charCountMap.entrySet()) {
+            System.out.println(entry.getKey() + " : " + entry.getValue());
+        }
+    }
+}
+
+// -------------------------------------------------------------------------------------
