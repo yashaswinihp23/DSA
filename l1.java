@@ -208,3 +208,32 @@ public class CharCountExample {
 }
 
 // -------------------------------------------------------------------------------------
+
+// Single Number
+
+class SolutionEighteen {
+    public int uniqueElement(int[] nums18) {
+        int result18 = 0;
+        for (int n : nums18) result18 ^= n;
+        return result18;
+    }
+}
+
+// -------------------------------------------------------------------------------------
+
+// Majority Element
+
+import java.util.*;
+
+class SolutionFourteen {
+    public int majorityNum(int[] nums14) {
+        Map<Integer, Integer> count14 = new HashMap<>();
+        for (int n : nums14) count14.put(n, count14.getOrDefault(n, 0) + 1);
+        for (int n : count14.keySet()) {
+            if (count14.get(n) > nums14.length / 2) return n;
+        }
+        return -1;
+    }
+}
+
+// -------------------------------------------------------------------------------------
