@@ -267,3 +267,133 @@ class ProgramFifteen {
 }
 
 // ------------------------------------------------------------------------------
+
+// Check Even or Odd
+
+import java.util.*;
+
+class ProgramSixteen {
+    public static void main(String[] args) {
+        Scanner sc16 = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int n16 = sc16.nextInt();
+        if (n16 % 2 == 0)
+            System.out.println("Even number");
+        else
+            System.out.println("Odd number");
+    }
+}
+
+// ------------------------------------------------------------------------------
+
+// Check Prime Number
+
+import java.util.*;
+
+class ProgramSeventeen {
+    public static void main(String[] args) {
+        Scanner sc17 = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int n17 = sc17.nextInt();
+        boolean isPrime17 = true;
+
+        if (n17 <= 1) isPrime17 = false;
+        else {
+            for (int i17 = 2; i17 <= Math.sqrt(n17); i17++) {
+                if (n17 % i17 == 0) {
+                    isPrime17 = false;
+                    break;
+                }
+            }
+        }
+
+        if (isPrime17)
+            System.out.println("Prime number");
+        else
+            System.out.println("Not prime");
+    }
+}
+
+// ------------------------------------------------------------------------------
+
+// Fibonacci Series
+
+import java.util.*;
+
+class ProgramEighteen {
+    public static void main(String[] args) {
+        Scanner sc18 = new Scanner(System.in);
+        System.out.print("Enter number of terms: ");
+        int n18 = sc18.nextInt();
+        int a18 = 0, b18 = 1;
+        System.out.print(a18 + " " + b18 + " ");
+        for (int i18 = 2; i18 < n18; i18++) {
+            int c18 = a18 + b18;
+            System.out.print(c18 + " ");
+            a18 = b18;
+            b18 = c18;
+        }
+    }
+}
+
+// ------------------------------------------------------------------------------
+
+// Linear Search
+    
+import java.util.*;
+
+class ProgramNineteen {
+    public static void main(String[] args) {
+        Scanner sc19 = new Scanner(System.in);
+        System.out.print("Enter array size: ");
+        int n19 = sc19.nextInt();
+        int[] arr19 = new int[n19];
+        System.out.println("Enter elements:");
+        for (int i19 = 0; i19 < n19; i19++) arr19[i19] = sc19.nextInt();
+
+        System.out.print("Enter target: ");
+        int target19 = sc19.nextInt();
+        boolean found19 = false;
+
+        for (int i19 = 0; i19 < n19; i19++) {
+            if (arr19[i19] == target19) {
+                System.out.println("Found at index " + i19);
+                found19 = true;
+                break;
+            }
+        }
+        if (!found19) System.out.println("Not found");
+    }
+}
+
+// ------------------------------------------------------------------------------
+
+// Bubble Sort
+    
+import java.util.*;
+
+class ProgramTwenty {
+    public static void main(String[] args) {
+        Scanner sc20 = new Scanner(System.in);
+        System.out.print("Enter array size: ");
+        int n20 = sc20.nextInt();
+        int[] arr20 = new int[n20];
+        for (int i20 = 0; i20 < n20; i20++) arr20[i20] = sc20.nextInt();
+
+        for (int i20 = 0; i20 < n20 - 1; i20++) {
+            for (int j20 = 0; j20 < n20 - i20 - 1; j20++) {
+                if (arr20[j20] > arr20[j20 + 1]) {
+                    int temp20 = arr20[j20];
+                    arr20[j20] = arr20[j20 + 1];
+                    arr20[j20 + 1] = temp20;
+                }
+            }
+        }
+
+        System.out.println("Sorted array:");
+        for (int num20 : arr20)
+            System.out.print(num20 + " ");
+    }
+}
+
+// ------------------------------------------------------------------------------
