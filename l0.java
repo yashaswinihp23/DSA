@@ -397,3 +397,104 @@ class ProgramTwenty {
 }
 
 // ------------------------------------------------------------------------------
+
+// Function to Add Two Numbers
+
+import java.util.*;
+
+class ProgramTwentyOne {
+    static int add21(int a21, int b21) {
+        return a21 + b21;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc21 = new Scanner(System.in);
+        System.out.print("Enter two numbers: ");
+        int x21 = sc21.nextInt();
+        int y21 = sc21.nextInt();
+        System.out.println("Sum = " + add21(x21, y21));
+    }
+}
+
+// Check Prime using Function
+
+import java.util.*;
+
+class ProgramTwentyTwo {
+    static boolean isPrime22(int n22) {
+        if (n22 <= 1) return false;
+        for (int i22 = 2; i22 <= Math.sqrt(n22); i22++) {
+            if (n22 % i22 == 0)
+                return false;
+        }
+        return true;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc22 = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int num22 = sc22.nextInt();
+        if (isPrime22(num22))
+            System.out.println("Prime");
+        else
+            System.out.println("Not Prime");
+    }
+}
+
+️// Factorial using Recursion
+
+import java.util.*;
+
+class ProgramTwentyThree {
+    static int fact23(int n23) {
+        if (n23 == 0 || n23 == 1) return 1;
+        return n23 * fact23(n23 - 1);
+    }
+
+    public static void main(String[] args) {
+        Scanner sc23 = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int num23 = sc23.nextInt();
+        System.out.println("Factorial = " + fact23(num23));
+    }
+}
+
+// Sum of Digits using Recursion
+
+import java.util.*;
+
+class ProgramTwentyFour {
+    static int sumDigits24(int n24) {
+        if (n24 == 0) return 0;
+        return (n24 % 10) + sumDigits24(n24 / 10);
+    }
+
+    public static void main(String[] args) {
+        Scanner sc24 = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int num24 = sc24.nextInt();
+        System.out.println("Sum of digits = " + sumDigits24(num24));
+    }
+}
+
+// Basic OOP — Class & Object
+
+class Student25 {
+    String name25;
+    int age25;
+
+    void display25() {
+        System.out.println("Name: " + name25 + ", Age: " + age25);
+    }
+}
+
+class ProgramTwentyFive {
+    public static void main(String[] args) {
+        Student25 s25 = new Student25();
+        s25.name25 = "Raju";
+        s25.age25 = 20;
+        s25.display25();
+    }
+}
+
+// ------------------------------------------------------------------------------
