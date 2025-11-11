@@ -498,3 +498,140 @@ class ProgramTwentyFive {
 }
 
 // ------------------------------------------------------------------------------
+
+//Constructor Example
+
+class Car26 {
+    String brand26;
+    int year26;
+
+    Car26() {
+        brand26 = "Unknown";
+        year26 = 0;
+    }
+
+    Car26(String b26, int y26) {
+        brand26 = b26;
+        year26 = y26;
+    }
+
+    void display26() {
+        System.out.println(brand26 + " - " + year26);
+    }
+}
+
+class ProgramTwentySix {
+    public static void main(String[] args) {
+        Car26 c261 = new Car26();
+        Car26 c262 = new Car26("Toyota", 2022);
+        c261.display26();
+        c262.display26();
+    }
+}
+
+️// Inheritance
+
+class Animal27 {
+    void sound27() {
+        System.out.println("Animal makes sound");
+    }
+}
+
+class Dog27 extends Animal27 {
+    void sound27() {
+        System.out.println("Dog barks");
+    }
+}
+
+class ProgramTwentySeven {
+    public static void main(String[] args) {
+        Dog27 d27 = new Dog27();
+        d27.sound27();
+    }
+}
+
+️// Method Overriding (Polymorphism)
+
+class Shape28 {
+    void draw28() {
+        System.out.println("Drawing shape");
+    }
+}
+
+class Circle28 extends Shape28 {
+    void draw28() {
+        System.out.println("Drawing circle");
+    }
+}
+
+class Square28 extends Shape28 {
+    void draw28() {
+        System.out.println("Drawing square");
+    }
+}
+
+class ProgramTwentyEight {
+    public static void main(String[] args) {
+        Shape28 s28;
+        s28 = new Circle28();
+        s28.draw28();
+        s28 = new Square28();
+        s28.draw28();
+    }
+}
+
+// Encapsulation
+
+class BankAccount29 {
+    private double balance29;
+
+    public void deposit29(double amount29) {
+        balance29 += amount29;
+    }
+
+    public void withdraw29(double amount29) {
+        if (amount29 <= balance29)
+            balance29 -= amount29;
+        else
+            System.out.println("Insufficient balance");
+    }
+
+    public double getBalance29() {
+        return balance29;
+    }
+}
+
+class ProgramTwentyNine {
+    public static void main(String[] args) {
+        BankAccount29 acc29 = new BankAccount29();
+        acc29.deposit29(1000);
+        acc29.withdraw29(200);
+        System.out.println("Current Balance: " + acc29.getBalance29());
+    }
+}
+
+// Abstraction
+
+abstract class Vehicle30 {
+    abstract void start30();
+    void stop30() {
+        System.out.println("Vehicle stopped");
+    }
+}
+
+class Bike30 extends Vehicle30 {
+    void start30() {
+        System.out.println("Bike started");
+    }
+}
+
+class ProgramThirty {
+    public static void main(String[] args) {
+        Vehicle30 v30 = new Bike30();
+        v30.start30();
+        v30.stop30();
+    }
+}
+
+// ------------------------------------------------------------------------------
+
