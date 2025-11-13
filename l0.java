@@ -635,3 +635,27 @@ class ProgramThirty {
 
 // ------------------------------------------------------------------------------
 
+// Find Minimum in Array
+
+import java.util.*;
+
+class ProgramThirtyOne {
+    public static void main(String[] args) {
+        Scanner sc31 = new Scanner(System.in);
+        System.out.print("Enter array size: ");
+        int n31 = sc31.nextInt();
+        int[] arr31 = new int[n31];
+        System.out.println("Enter elements:");
+        for (int i31 = 0; i31 < n31; i31++)
+            arr31[i31] = sc31.nextInt();
+
+        int min31 = arr31[0];
+        for (int num31 : arr31)
+            if (num31 < min31)
+                min31 = num31;
+
+        System.out.println("Minimum element: " + min31);
+    }
+}
+
+// ------------------------------------------------------------------------------
