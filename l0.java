@@ -659,3 +659,94 @@ class ProgramThirtyOne {
 }
 
 // ------------------------------------------------------------------------------
+
+// Count Frequency of Elements (Using HashMap)
+
+import java.util.*;
+
+class ProgramThirtyTwo {
+    public static void main(String[] args) {
+        Scanner sc32 = new Scanner(System.in);
+        System.out.print("Enter array size: ");
+        int n32 = sc32.nextInt();
+        int[] arr32 = new int[n32];
+        for (int i32 = 0; i32 < n32; i32++)
+            arr32[i32] = sc32.nextInt();
+
+        Map<Integer, Integer> freq32 = new HashMap<>();
+        for (int num32 : arr32)
+            freq32.put(num32, freq32.getOrDefault(num32, 0) + 1);
+
+        for (Map.Entry<Integer, Integer> e32 : freq32.entrySet())
+            System.out.println(e32.getKey() + " -> " + e32.getValue());
+    }
+}
+
+// ------------------------------------------------------------------------------
+
+// Check Palindrome String
+
+import java.util.*;
+
+class ProgramThirtyFour {
+    public static void main(String[] args) {
+        Scanner sc34 = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        String str34 = sc34.nextLine();
+
+        int l34 = 0, r34 = str34.length() - 1;
+        boolean isPal34 = true;
+        while (l34 < r34) {
+            if (str34.charAt(l34) != str34.charAt(r34)) {
+                isPal34 = false;
+                break;
+            }
+            l34++;
+            r34--;
+        }
+
+        if (isPal34)
+            System.out.println("Palindrome");
+        else
+            System.out.println("Not Palindrome");
+    }
+}
+
+// ------------------------------------------------------------------------------
+
+// Binary Search
+
+import java.util.*;
+
+class ProgramThirtyFive {
+    public static void main(String[] args) {
+        Scanner sc35 = new Scanner(System.in);
+        System.out.print("Enter sorted array size: ");
+        int n35 = sc35.nextInt();
+        int[] arr35 = new int[n35];
+        for (int i35 = 0; i35 < n35; i35++)
+            arr35[i35] = sc35.nextInt();
+
+        System.out.print("Enter target element: ");
+        int target35 = sc35.nextInt();
+
+        int left35 = 0, right35 = n35 - 1, result35 = -1;
+        while (left35 <= right35) {
+            int mid35 = left35 + (right35 - left35) / 2;
+            if (arr35[mid35] == target35) {
+                result35 = mid35;
+                break;
+            } else if (arr35[mid35] < target35)
+                left35 = mid35 + 1;
+            else
+                right35 = mid35 - 1;
+        }
+
+        if (result35 != -1)
+            System.out.println("Element found at index " + result35);
+        else
+            System.out.println("Element not found");
+    }
+}
+
+// ------------------------------------------------------------------------------
