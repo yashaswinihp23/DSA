@@ -750,3 +750,146 @@ class ProgramThirtyFive {
 }
 
 // ------------------------------------------------------------------------------
+
+// Selection Sort
+
+import java.util.*;
+
+class ProgramThirtySix {
+    public static void main(String[] args) {
+        Scanner sc36 = new Scanner(System.in);
+        System.out.print("Enter size: ");
+        int n36 = sc36.nextInt();
+        int[] arr36 = new int[n36];
+
+        for (int i36 = 0; i36 < n36; i36++)
+            arr36[i36] = sc36.nextInt();
+
+        for (int i36 = 0; i36 < n36 - 1; i36++) {
+            int minIndex36 = i36;
+            for (int j36 = i36 + 1; j36 < n36; j36++) {
+                if (arr36[j36] < arr36[minIndex36])
+                    minIndex36 = j36;
+            }
+            int temp36 = arr36[i36];
+            arr36[i36] = arr36[minIndex36];
+            arr36[minIndex36] = temp36;
+        }
+
+        for (int x36 : arr36)
+            System.out.print(x36 + " ");
+    }
+}
+
+// Insertion Sort
+
+import java.util.*;
+
+class ProgramThirtySeven {
+    public static void main(String[] args) {
+        Scanner sc37 = new Scanner(System.in);
+        System.out.print("Enter size: ");
+        int n37 = sc37.nextInt();
+        int[] arr37 = new int[n37];
+
+        for (int i37 = 0; i37 < n37; i37++)
+            arr37[i37] = sc37.nextInt();
+
+        for (int i37 = 1; i37 < n37; i37++) {
+            int key37 = arr37[i37];
+            int j37 = i37 - 1;
+            while (j37 >= 0 && arr37[j37] > key37) {
+                arr37[j37 + 1] = arr37[j37];
+                j37--;
+            }
+            arr37[j37 + 1] = key37;
+        }
+
+        for (int num37 : arr37)
+            System.out.print(num37 + " ");
+    }
+}
+
+// Matrix Input + Print
+
+import java.util.*;
+
+class ProgramThirtyEight {
+    public static void main(String[] args) {
+        Scanner sc38 = new Scanner(System.in);
+        System.out.print("Rows: ");
+        int r38 = sc38.nextInt();
+        System.out.print("Cols: ");
+        int c38 = sc38.nextInt();
+
+        int[][] mat38 = new int[r38][c38];
+
+        for (int i38 = 0; i38 < r38; i38++)
+            for (int j38 = 0; j38 < c38; j38++)
+                mat38[i38][j38] = sc38.nextInt();
+
+        for (int i38 = 0; i38 < r38; i38++) {
+            for (int j38 = 0; j38 < c38; j38++)
+                System.out.print(mat38[i38][j38] + " ");
+            System.out.println();
+        }
+    }
+}
+
+// Transpose of Matrix
+
+import java.util.*;
+
+class ProgramThirtyNine {
+    public static void main(String[] args) {
+        Scanner sc39 = new Scanner(System.in);
+        System.out.print("Rows: ");
+        int r39 = sc39.nextInt();
+        System.out.print("Cols: ");
+        int c39 = sc39.nextInt();
+
+        int[][] mat39 = new int[r39][c39];
+
+        for (int i39 = 0; i39 < r39; i39++)
+            for (int j39 = 0; j39 < c39; j39++)
+                mat39[i39][j39] = sc39.nextInt();
+
+        int[][] trans39 = new int[c39][r39];
+        for (int i39 = 0; i39 < r39; i39++)
+            for (int j39 = 0; j39 < c39; j39++)
+                trans39[j39][i39] = mat39[i39][j39];
+
+        for (int i39 = 0; i39 < c39; i39++) {
+            for (int j39 = 0; j39 < r39; j39++)
+                System.out.print(trans39[i39][j39] + " ");
+            System.out.println();
+        }
+    }
+}
+
+// Reverse Words in a String
+
+import java.util.*;
+
+class ProgramForty {
+    public static void main(String[] args) {
+        Scanner sc40 = new Scanner(System.in);
+        String str40 = sc40.nextLine();
+
+        String[] parts40 = str40.split(" ");
+        int left40 = 0, right40 = parts40.length - 1;
+
+        while (left40 < right40) {
+            String temp40 = parts40[left40];
+            parts40[left40] = parts40[right40];
+            parts40[right40] = temp40;
+
+            left40++;
+            right40--;
+        }
+
+        System.out.println(String.join(" ", parts40));
+    }
+}
+
+// ------------------------------------------------------------------------------
