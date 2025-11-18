@@ -610,6 +610,8 @@ class ProgramTwentyNine {
     }
 }
 
+// ------------------------------------------------------------------------------
+
 // Abstraction
 
 abstract class Vehicle30 {
