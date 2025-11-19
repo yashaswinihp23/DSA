@@ -903,3 +903,77 @@ class ProgramForty {
 }
 
 // ------------------------------------------------------------------------------
+
+// PATTERNS
+
+// ------------------------------------------------------------------------------
+
+// Number Triangle (Left Aligned Increasing Numbers)
+
+class Pattern11 {
+    public void printPattern11(int n11) {
+        for (int i11 = 1; i11 <= n11; i11++) {
+            for (int j11 = 1; j11 <= i11; j11++) {
+                System.out.print(j11);
+            }
+            System.out.println();
+        }
+    }
+}
+
+// Number Triangle (Repeated Row Numbers)
+
+class Pattern12 {
+    public void printPattern12(int n12) {
+        for (int i12 = 1; i12 <= n12; i12++) {
+            for (int j12 = 1; j12 <= i12; j12++) {
+                System.out.print(i12);
+            }
+            System.out.println();
+        }
+    }
+}
+
+// Reverse Number Triangle
+
+class Pattern13 {
+    public void printPattern13(int n13) {
+        for (int i13 = n13; i13 >= 1; i13--) {
+            for (int j13 = 1; j13 <= i13; j13++) {
+                System.out.print(j13);
+            }
+            System.out.println();
+        }
+    }
+}
+
+// Reverse Star Triangle
+
+class Pattern14 {
+    public void printPattern14(int n14) {
+        for (int i14 = n14; i14 >= 1; i14--) {
+            for (int j14 = 1; j14 <= i14; j14++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+
+// Right-Aligned Star Triangle
+
+class Pattern15 {
+    public void printPattern15(int n15) {
+        for (int i15 = 1; i15 <= n15; i15++) {
+            for (int s15 = n15 - i15; s15 > 0; s15--) {
+                System.out.print(" ");
+            }
+            for (int j15 = 1; j15 <= i15; j15++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+
+// ------------------------------------------------------------------------------
