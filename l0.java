@@ -1102,3 +1102,25 @@ class Pattern21 {
 }
 
 // ------------------------------------------------------------------------------
+
+// Hollow Inverted Pyramid
+
+class Pattern22 {
+    public void printPattern22(int n22) {
+        for (int i22 = n22; i22 >= 1; i22--) {
+            for (int s22 = n22 - i22; s22 > 0; s22--) {
+                System.out.print(" ");
+            }
+            for (int j22 = 1; j22 <= 2 * i22 - 1; j22++) {
+                if (j22 == 1 || j22 == 2 * i22 - 1 || i22 == n22)
+                    System.out.print("*");
+                else
+                    System.out.print(" ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+// ------------------------------------------------------------------------------
