@@ -1081,3 +1081,24 @@ class Pattern20 {
 }
 
 // ------------------------------------------------------------------------------
+
+// Hollow Pyramid
+
+class Pattern21 {
+    public void printPattern21(int n21) {
+        for (int i21 = 1; i21 <= n21; i21++) {
+            for (int s21 = n21 - i21; s21 > 0; s21--) {
+                System.out.print(" ");
+            }
+            for (int j21 = 1; j21 <= 2 * i21 - 1; j21++) {
+                if (j21 == 1 || j21 == 2 * i21 - 1 || i21 == n21)
+                    System.out.print("*");
+                else
+                    System.out.print(" ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+// ------------------------------------------------------------------------------
