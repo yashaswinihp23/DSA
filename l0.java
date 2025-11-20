@@ -1062,5 +1062,22 @@ class Pattern19 {
     }
 }
 
+// ------------------------------------------------------------------------------
+
+// Hollow Square
+
+class Pattern20 {
+    public void printPattern20(int n20) {
+        for (int i20 = 1; i20 <= n20; i20++) {
+            for (int j20 = 1; j20 <= n20; j20++) {
+                if (i20 == 1 || i20 == n20 || j20 == 1 || j20 == n20)
+                    System.out.print("*");
+                else
+                    System.out.print(" ");
+            }
+            System.out.println();
+        }
+    }
+}
 
 // ------------------------------------------------------------------------------
