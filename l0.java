@@ -977,3 +977,37 @@ class Pattern15 {
 }
 
 // ------------------------------------------------------------------------------
+
+// Full Pyramid (Centered Stars)
+
+class Pattern16 {
+    public void printPattern16(int n16) {
+        for (int i16 = 1; i16 <= n16; i16++) {
+            for (int s16 = n16 - i16; s16 > 0; s16--) {
+                System.out.print(" ");
+            }
+            for (int j16 = 1; j16 <= 2 * i16 - 1; j16++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+
+// ------------------------------------------------------------------------------
+
+// Inverted Full Pyramid
+
+class Pattern17 {
+    public void printPattern17(int n17) {
+        for (int i17 = n17; i17 >= 1; i17--) {
+            for (int s17 = n17 - i17; s17 > 0; s17--) {
+                System.out.print(" ");
+            }
+            for (int j17 = 1; j17 <= 2 * i17 - 1; j17++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
