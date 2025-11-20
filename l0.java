@@ -1011,3 +1011,56 @@ class Pattern17 {
         }
     }
 }
+
+// ------------------------------------------------------------------------------
+
+// Diamond Pattern
+
+class Pattern18 {
+    public void printPattern18(int n18) {
+
+        for (int i18 = 1; i18 <= n18; i18++) {
+            for (int s18 = n18 - i18; s18 > 0; s18--) {
+                System.out.print(" ");
+            }
+            for (int j18 = 1; j18 <= 2 * i18 - 1; j18++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+        for (int i18 = n18 - 1; i18 >= 1; i18--) {
+            for (int s18 = n18 - i18; s18 > 0; s18--) {
+                System.out.print(" ");
+            }
+            for (int j18 = 1; j18 <= 2 * i18 - 1; j18++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+
+// ------------------------------------------------------------------------------
+
+// Number Pyramid
+
+class Pattern19 {
+    public void printPattern19(int n19) {
+        for (int i19 = 1; i19 <= n19; i19++) {
+            for (int s19 = n19 - i19; s19 > 0; s19--) {
+                System.out.print(" ");
+            }
+            for (int j19 = 1; j19 <= i19; j19++) {
+                System.out.print(j19);
+            }
+            for (int k19 = i19 - 1; k19 >= 1; k19--) {
+                System.out.print(k19);
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+// ------------------------------------------------------------------------------
