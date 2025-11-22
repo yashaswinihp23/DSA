@@ -1162,3 +1162,62 @@ class Pattern26 {
 
 // ------------------------------------------------------------------------------
 
+// Inverted Number Triangle
+
+class Pattern36 {
+    public void printPattern36(int n36) {
+        for (int i36 = n36; i36 >= 1; i36--) {
+            for (int j36 = 1; j36 <= i36; j36++) {
+                System.out.print(j36);
+            }
+            System.out.println();
+        }
+    }
+}
+
+// ------------------------------------------------------------------------------
+
+// Continuous Increasing Number Triangle
+
+class Pattern37 {
+    public void printPattern37(int n37) {
+        int num37 = 1;
+        for (int i37 = 1; i37 <= n37; i37++) {
+            for (int j37 = 1; j37 <= i37; j37++) {
+                System.out.print(num37++ + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+    
+// ------------------------------------------------------------------------------
+
+// Palindrome Number Triangle
+
+class Pattern38 {
+    public void printPattern38(int n38) {
+        for (int i38 = 1; i38 <= n38; i38++) {
+            for (int j38 = 1; j38 <= i38; j38++) System.out.print(j38);
+            for (int k38 = i38 - 1; k38 >= 1; k38--) System.out.print(k38);
+            System.out.println();
+        }
+    }
+}
+
+// ------------------------------------------------------------------------------
+
+// Alphabet Triangle
+
+class Pattern40 {
+    public void printPattern40(int n40) {
+        for (int i40 = 1; i40 <= n40; i40++) {
+            for (int j40 = 0; j40 < i40; j40++) {
+                System.out.print((char)('A' + j40));
+            }
+            System.out.println();
+        }
+    }
+}
+
+// ------------------------------------------------------------------------------
