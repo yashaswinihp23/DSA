@@ -1279,3 +1279,29 @@ class Solution18 {
 }
 
 // ------------------------------------------------------------------------------
+
+// Count Even Numbers in Array
+
+class Solution19 {
+    public int countEven(int[] arr) {
+        int c = 0;
+        for (int x : arr) {
+            if (x % 2 == 0) c++;
+        }
+        return c;
+    }
+}
+
+// ------------------------------------------------------------------------------
+
+// Find Maximum Value in Array
+
+class Solution20 {
+    public int maxValue(int[] arr) {
+        int m = arr[0];
+        for (int x : arr) m = Math.max(m, x);
+        return m;
+    }
+}
+
+// ------------------------------------------------------------------------------
