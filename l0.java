@@ -1221,3 +1221,16 @@ class Pattern40 {
 }
 
 // ------------------------------------------------------------------------------
+
+// Check if Array Is Sorted
+
+class Solution15 {
+    public boolean isSorted(int[] arr) {
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] < arr[i - 1]) return false;
+        }
+        return true;
+    }
+}
+
+// ------------------------------------------------------------------------------
