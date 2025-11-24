@@ -1305,3 +1305,51 @@ class Solution20 {
 }
 
 // ------------------------------------------------------------------------------
+
+// Reverse a String
+
+class Solution21 {
+    public String reverseString(String t) {
+        char[] a = t.toCharArray();
+        int i = 0, j = a.length - 1;
+        while (i < j) {
+            char c = a[i];
+            a[i] = a[j];
+            a[j] = c;
+            i++;
+            j--;
+        }
+        return new String(a);
+    }
+}
+
+// ------------------------------------------------------------------------------
+
+// Count Characters in a String
+
+class Solution22 {
+    public int[] freq(String s) {
+        int[] f = new int[256];
+        for (char c : s.toCharArray()) f[c]++;
+        return f;
+    }
+}
+
+// ------------------------------------------------------------------------------
+
+// Check Palindrome String
+
+class Solution23 {
+    public boolean isPal(String x) {
+        int i = 0, j = x.length() - 1;
+        while (i < j) {
+            if (x.charAt(i) != x.charAt(j)) return false;
+            i++;
+            j--;
+        }
+        return true;
+    }
+}
+
+// ------------------------------------------------------------------------------
+
