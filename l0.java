@@ -1353,3 +1353,16 @@ class Solution23 {
 
 // ------------------------------------------------------------------------------
 
+// Print Right-Angle Triangle Pattern
+
+class Solution24 {
+    public void pattern(int n) {
+        for (int i = 1; i <= n; i++) {
+            StringBuilder b = new StringBuilder();
+            for (int j = 1; j <= i; j++) b.append('*');
+            System.out.println(b.toString());
+        }
+    }
+}
+
+// ------------------------------------------------------------------------------
