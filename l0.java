@@ -1366,3 +1366,15 @@ class Solution24 {
 }
 
 // ------------------------------------------------------------------------------
+
+// Count Words in a Sentence
+
+class Solution25 {
+    public int countWords(String s) {
+        if (s.length() == 0) return 0;
+        String[] p = s.trim().split("\\s+");
+        return p.length;
+    }
+}
+
+// ------------------------------------------------------------------------------
