@@ -1378,3 +1378,19 @@ class Solution25 {
 }
 
 // ------------------------------------------------------------------------------
+
+// HashMap — Count Frequencies
+
+import java.util.*;
+
+class Solution26 {
+    public Map<Character, Integer> freqMap(String s) {
+        Map<Character, Integer> m = new HashMap<>();
+        for (char c : s.toCharArray()) {
+            m.put(c, m.getOrDefault(c, 0) + 1);
+        }
+        return m;
+    }
+}
+
+// ------------------------------------------------------------------------------
