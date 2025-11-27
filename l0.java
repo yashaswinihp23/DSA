@@ -1437,3 +1437,57 @@ class Solution29 {
 }
 
 // ------------------------------------------------------------------------------
+
+// Intersection of Two Arrays (Unique)
+
+import java.util.*;
+
+class Solution30 {
+    public int[] intersection(int[] a30, int[] b30) {
+        Set<Integer> s30 = new HashSet<>();
+        for (int x30 : a30) s30.add(x30);
+        Set<Integer> r30 = new HashSet<>();
+        for (int y30 : b30) if (s30.contains(y30)) r30.add(y30);
+        int[] ans30 = new int[r30.size()];
+        int i30 = 0;
+        for (int v30 : r30) ans30[i30++] = v30;
+        return ans30;
+    }
+}
+
+// ------------------------------------------------------------------------------
+
+// Two Pointer — Pair Sum Exists
+
+import java.util.*;
+
+class Solution31 {
+    public boolean pairSum(int[] p31, int t31) {
+        Arrays.sort(p31);
+        int i31 = 0, j31 = p31.length - 1;
+        while (i31 < j31) {
+            int s31 = p31[i31] + p31[j31];
+            if (s31 == t31) return true;
+            if (s31 < t31) i31++;
+            else j31--;
+        }
+        return false;
+    }
+}
+
+// ------------------------------------------------------------------------------
+
+// Remove Duplicates From Sorted Array
+
+class Solution32 {
+    public int removeDuplicates(int[] r32) {
+        if (r32.length == 0) return 0;
+        int p32 = 1;
+        for (int i32 = 1; i32 < r32.length; i32++) {
+            if (r32[i32] != r32[p32 - 1]) r32[p32++] = r32[i32];
+        }
+        return p32;
+    }
+}
+
+// ------------------------------------------------------------------------------
