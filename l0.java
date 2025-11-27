@@ -1394,3 +1394,20 @@ class Solution26 {
 }
 
 // ------------------------------------------------------------------------------
+
+// Valid Anagram
+
+import java.util.*;
+
+class Solution27 {
+    public boolean isAnagram(String a27, String b27) {
+        if (a27.length() != b27.length()) return false;
+        int[] f27 = new int[26];
+        for (char c27 : a27.toCharArray()) f27[c27 - 'a']++;
+        for (char d27 : b27.toCharArray()) f27[d27 - 'a']--;
+        for (int x27 : f27) if (x27 != 0) return false;
+        return true;
+    }
+}
+
+// ------------------------------------------------------------------------------
