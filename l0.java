@@ -1491,3 +1491,96 @@ class Solution32 {
 }
 
 // ------------------------------------------------------------------------------
+
+// Contains Duplicate
+
+import java.util.*;
+
+class Solution33 {
+    public boolean containsDuplicate(int[] d33) {
+        Set<Integer> s33 = new HashSet<>();
+        for (int x33 : d33) {
+            if (s33.contains(x33)) return true;
+            s33.add(x33);
+        }
+        return false;
+    }
+}
+
+// ------------------------------------------------------------------------------
+
+// Majority Element
+
+class Solution34 {
+    public int majorityElement(int[] a34) {
+        int c34 = 0, v34 = 0;
+        for (int x34 : a34) {
+            if (c34 == 0) v34 = x34;
+            c34 += (x34 == v34) ? 1 : -1;
+        }
+        return v34;
+    }
+}
+
+// ------------------------------------------------------------------------------
+
+class Solution34 {
+    public int majorityElement(int[] a34) {
+        int c34 = 0, v34 = 0;
+        for (int x34 : a34) {
+            if (c34 == 0) v34 = x34;
+            c34 += (x34 == v34) ? 1 : -1;
+        }
+        return v34;
+    }
+}
+
+// ------------------------------------------------------------------------------
+
+// Max Consecutive Ones
+
+class Solution35 {
+    public int findMaxConsecutiveOnes(int[] b35) {
+        int m35 = 0, c35 = 0;
+        for (int x35 : b35) {
+            if (x35 == 1) c35++;
+            else c35 = 0;
+            if (c35 > m35) m35 = c35;
+        }
+        return m35;
+    }
+}
+
+// ------------------------------------------------------------------------------
+
+// First Unique Character in String
+
+class Solution36 {
+    public int firstUniqChar(String s36) {
+        int[] f36 = new int[26];
+        for (char c36 : s36.toCharArray()) f36[c36 - 'a']++;
+        for (int i36 = 0; i36 < s36.length(); i36++) {
+            if (f36[s36.charAt(i36) - 'a'] == 1) return i36;
+        }
+        return -1;
+    }
+}
+
+// ------------------------------------------------------------------------------
+
+// Sliding Window – Max Sum of Subarray Size K
+
+class Solution37 {
+    public int maxWindow(int[] a37, int k37) {
+        int s37 = 0;
+        for (int i37 = 0; i37 < k37; i37++) s37 += a37[i37];
+        int m37 = s37;
+        for (int i37 = k37; i37 < a37.length; i37++) {
+            s37 += a37[i37] - a37[i37 - k37];
+            if (s37 > m37) m37 = s37;
+        }
+        return m37;
+    }
+}
+
+// ------------------------------------------------------------------------------
