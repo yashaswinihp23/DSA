@@ -1584,3 +1584,45 @@ class Solution37 {
 }
 
 // ------------------------------------------------------------------------------
+
+// Prefix Sum – Subarray Sum Equals K
+
+import java.util.*;
+
+class Solution38 {
+    public int subarraySum(int[] x38, int k38) {
+        Map<Integer,Integer> m38 = new HashMap<>();
+        m38.put(0,1);
+        int s38 = 0, c38 = 0;
+        for (int v38 : x38) {
+            s38 += v38;
+            if (m38.containsKey(s38 - k38)) c38 += m38.get(s38 - k38);
+            m38.put(s38, m38.getOrDefault(s38,0)+1);
+        }
+        return c38;
+    }
+}
+
+// ------------------------------------------------------------------------------
+
+// Sliding Window – Longest Substring Without Repeating Characters
+
+import java.util.*;
+
+class Solution39 {
+    public int lengthOfLongestSubstring(String s39) {
+        Set<Character> set39 = new HashSet<>();
+        int i39 = 0, j39 = 0, m39 = 0;
+        while (j39 < s39.length()) {
+            if (!set39.contains(s39.charAt(j39))) {
+                set39.add(s39.charAt(j39++));
+                m39 = Math.max(m39, j39 - i39);
+            } else {
+                set39.remove(s39.charAt(i39++));
+            }
+        }
+        return m39;
+    }
+}
+
+// ------------------------------------------------------------------------------
