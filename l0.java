@@ -1626,3 +1626,20 @@ class Solution39 {
 }
 
 // ------------------------------------------------------------------------------
+
+// Binary Search (Classic)
+
+class Solution40 {
+    public int binarySearch(int[] a40, int t40) {
+        int l40 = 0, r40 = a40.length - 1;
+        while (l40 <= r40) {
+            int m40 = l40 + (r40 - l40) / 2;
+            if (a40[m40] == t40) return m40;
+            if (a40[m40] < t40) l40 = m40 + 1;
+            else r40 = m40 - 1;
+        }
+        return -1;
+    }
+}
+
+// ------------------------------------------------------------------------------
