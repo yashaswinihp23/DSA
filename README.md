@@ -1,4 +1,4 @@
-# 🧠 DSA Time & Space Complexity — Top 20 Interview Questions
+# DSA Time & Space Complexity — Top 20 Interview Questions
 
 A clean and concise cheat sheet of the most commonly asked DSA complexity interview questions.
 
