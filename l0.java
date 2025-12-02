@@ -1704,3 +1704,28 @@ class Solution43 {
 }
 
 // ------------------------------------------------------------------------------
+
+// Min Stack
+
+import java.util.*;
+
+class Solution44 {
+    Stack<Integer> s44 = new Stack<>();
+    Stack<Integer> m44 = new Stack<>();
+    public void push(int x44) {
+        s44.push(x44);
+        if (m44.isEmpty() || x44 <= m44.peek()) m44.push(x44);
+    }
+    public void pop() {
+        if (s44.peek().equals(m44.peek())) m44.pop();
+        s44.pop();
+    }
+    public int top() {
+        return s44.peek();
+    }
+    public int getMin() {
+        return m44.peek();
+    }
+}
+
+// ------------------------------------------------------------------------------
