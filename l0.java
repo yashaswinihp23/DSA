@@ -1681,3 +1681,26 @@ class Solution42 {
 }
 
 // ------------------------------------------------------------------------------
+
+// Valid Parentheses
+
+import java.util.*;
+
+class Solution43 {
+    public boolean isValid(String s43) {
+        Stack<Character> st43 = new Stack<>();
+        for (char c43 : s43.toCharArray()) {
+            if (c43 == '(' || c43 == '{' || c43 == '[') st43.push(c43);
+            else {
+                if (st43.isEmpty()) return false;
+                char t43 = st43.pop();
+                if (c43 == ')' && t43 != '(') return false;
+                if (c43 == '}' && t43 != '{') return false;
+                if (c43 == ']' && t43 != '[') return false;
+            }
+        }
+        return st43.isEmpty();
+    }
+}
+
+// ------------------------------------------------------------------------------
