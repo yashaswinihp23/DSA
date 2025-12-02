@@ -1729,3 +1729,19 @@ class Solution44 {
 }
 
 // ------------------------------------------------------------------------------
+
+// Remove Adjacent Duplicates
+
+class Solution45 {
+    public String removeDup(String s45) {
+        StringBuilder b45 = new StringBuilder();
+        for (char c45 : s45.toCharArray()) {
+            int n45 = b45.length();
+            if (n45 > 0 && b45.charAt(n45 - 1) == c45) b45.deleteCharAt(n45 - 1);
+            else b45.append(c45);
+        }
+        return b45.toString();
+    }
+}
+
+// ------------------------------------------------------------------------------
