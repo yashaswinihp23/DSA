@@ -1780,3 +1780,19 @@ class Solution {
 }
 
 // ------------------------------------------------------------------------------
+
+// Find Pivot Index
+
+class Solution {
+    public int pivotIndex(int[] a) {
+        int s = 0, l = 0;
+        for (int v : a) s += v;
+        for (int i = 0; i < a.length; i++) {
+            if (l == s - l - a[i]) return i;
+            l += a[i];
+        }
+        return -1;
+    }
+}
+
+// ------------------------------------------------------------------------------
