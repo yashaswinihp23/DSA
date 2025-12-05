@@ -1824,3 +1824,23 @@ class Solution {
 }
 
 // ------------------------------------------------------------------------------
+
+// Next Greater Element
+
+import java.util.*;
+
+class Solution {
+    public int[] nextGreaterElement(int[] a, int[] b) {
+        Map<Integer, Integer> m = new HashMap<>();
+        Stack<Integer> st = new Stack<>();
+        for (int v : b) {
+            while (!st.isEmpty() && st.peek() < v) m.put(st.pop(), v);
+            st.push(v);
+        }
+        int[] r = new int[a.length];
+        for (int i = 0; i < a.length; i++) r[i] = m.getOrDefault(a[i], -1);
+        return r;
+    }
+}
+
+// ------------------------------------------------------------------------------
