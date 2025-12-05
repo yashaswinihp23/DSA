@@ -1811,3 +1811,16 @@ class Solution {
 
 // ------------------------------------------------------------------------------
 
+// Valid Anagram
+
+class Solution {
+    public boolean isAnagram(String x, String y) {
+        if (x.length() != y.length()) return false;
+        int[] f = new int[26];
+        for (char c : x.toCharArray()) f[c - 'a']++;
+        for (char c : y.toCharArray()) if (--f[c - 'a'] < 0) return false;
+        return true;
+    }
+}
+
+// ------------------------------------------------------------------------------
