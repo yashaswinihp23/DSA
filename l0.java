@@ -1844,3 +1844,22 @@ class Solution {
 }
 
 // ------------------------------------------------------------------------------
+
+// Intersection of Two Arrays
+
+import java.util.*;
+
+class Solution {
+    public int[] intersection(int[] a, int[] b) {
+        Set<Integer> s = new HashSet<>();
+        Set<Integer> r = new HashSet<>();
+        for (int x : a) s.add(x);
+        for (int y : b) if (s.contains(y)) r.add(y);
+        int[] o = new int[r.size()];
+        int i = 0;
+        for (int v : r) o[i++] = v;
+        return o;
+    }
+}
+
+// ------------------------------------------------------------------------------
