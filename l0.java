@@ -1885,3 +1885,16 @@ class Solution {
         return c;
     }
 }
+
+// Best Time to Buy and Sell Stock
+
+class Solution {
+    public int maxProfit(int[] a) {
+        int m = Integer.MAX_VALUE, p = 0;
+        for (int x : a) {
+            if (x < m) m = x;
+            else p = Math.max(p, x - m);
+        }
+        return p;
+    }
+}
