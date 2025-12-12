@@ -1991,3 +1991,17 @@ class Solution {
 
 // ------------------------------------------------------------------------------
 
+// Majority Element
+
+class Solution {
+    public int majorityElement(int[] numsA) {
+        int cand = 0, cnt = 0;
+        for (int n : numsA) {
+            if (cnt == 0) cand = n;
+            cnt += (n == cand ? 1 : -1);
+        }
+        return cand;
+    }
+}
+
+// ------------------------------------------------------------------------------
