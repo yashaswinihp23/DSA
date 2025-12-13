@@ -2007,6 +2007,7 @@ class Solution {
 // ------------------------------------------------------------------------------
 
 // Contains Duplicate
+
 import java.util.*;
 
 class Solution {
@@ -2016,6 +2017,20 @@ class Solution {
             if (!setB.add(v)) return true;
         }
         return false;
+    }
+}
+
+// ------------------------------------------------------------------------------
+
+// Best Time to Buy and Sell Stock II
+
+class Solution {
+    public int maxProfit(int[] pArr) {
+        int prof = 0;
+        for (int i = 1; i < pArr.length; i++) {
+            if (pArr[i] > pArr[i - 1]) prof += pArr[i] - pArr[i - 1];
+        }
+        return prof;
     }
 }
 
