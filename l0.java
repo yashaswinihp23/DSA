@@ -2005,3 +2005,18 @@ class Solution {
 }
 
 // ------------------------------------------------------------------------------
+
+// Contains Duplicate
+import java.util.*;
+
+class Solution {
+    public boolean containsDuplicate(int[] numsB) {
+        Set<Integer> setB = new HashSet<>();
+        for (int v : numsB) {
+            if (!setB.add(v)) return true;
+        }
+        return false;
+    }
+}
+
+// ------------------------------------------------------------------------------
